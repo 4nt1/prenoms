@@ -1,0 +1,14 @@
+{
+  "name": "prenoms",
+  "version": "1.0.0",
+  "description": "Random first name finder",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "4nt1",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^0.14.2"
+  }
+}
