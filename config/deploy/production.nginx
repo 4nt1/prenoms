@@ -1,0 +1,22 @@
+upstream prenoms {
+    server 127.0.0.1:3000;
+}
+
+# nginx server instance
+server {
+    listen 80;
+    server_name prenoms.antoinemary.me;
+    #access_log /var/log/nginx/x.log;
+
+    location / {
+        root /home/deploy/prenoms/current/public;
+        index index.html;
+        try_files $uri @node;
+    }
+
+    location @node {
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_pass http://prenoms;
+    }
+}
