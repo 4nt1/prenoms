@@ -3,14 +3,15 @@ require 'json'
 require 'pry'
 
 names = CSV.parse(
-          IO.read(File.open('server/db/Prenoms.csv')).force_encoding("ISO-8859-1").encode("utf-8", replace: nil)
-          )
+          IO.read(File.open('server/db/Prenoms.csv'))
+            .force_encoding("ISO-8859-1")
+            .encode("utf-8", replace: nil),
+            col_sep: ';')
 
-json_names = names[1..-1].flat_map do |name|
-  parsed  = name[0].split(';')
-  name    = parsed[0].gsub(/\s\(.*\)/, '')
-  genders = parsed[1].split(',')
-  langs   = parsed[2].split(',').map {|l| l.gsub(/\s\(.*\)/, '') } rescue ['']
+json_names = names[1..-1].flat_map do |line|
+  name    = line[0].gsub(/\s\(.*\)/, '')
+  genders = line[1].split(',')
+  langs   = line[2].split(', ').map {|l| l.gsub(/\s\(.*\)/, '') } rescue ['']
   genders.flat_map do |gender|
     langs.flat_map do |lang|
       {

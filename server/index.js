@@ -14,7 +14,8 @@ import mongoose         from 'mongoose';
 var app = express();
 app.server = http.createServer(app);
 
-mongoose.connect('mongodb://localhost:17017/prenoms');
+let port = process.env.NODE_ENV === 'production' ? 27017 : 17017;
+mongoose.connect(`mongodb://localhost:${port}/prenoms`);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
