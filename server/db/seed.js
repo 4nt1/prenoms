@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-let port = process.env.NODE_ENV === 'production' ? 27017 : 17017;
+var port = process.env.NODE_ENV === 'production' ? 27017 : 17017;
 mongoose.connect(`mongodb://localhost:${port}/prenoms`);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
