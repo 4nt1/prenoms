@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro)
+
+html
+  font-size : 1rem
+  *
+    font-family: 'Source Code Pro'
+
+  .overlay
+    display : none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 1000%
+    z-index: 10
+  .first-name
+    display: inline-block
+    padding : 5%
+    border-radius : 1rem
+    cursor : pointer
+    .letter, .front, .back
+      width : 1rem
+      height: 2rem
+      transform-style: preserve-3d
+    .letter
+      margin-right: 0.2rem
+      border-radius: 0.5rem
+      display: inline-block
+      color: grey
+      font-size: 2rem
+      padding: 0.5rem
+      .front, .back
+        border : 1px solid lightgrey
+        padding: 0.5rem
+        border-radius : 0.5rem
+        backface-visibility: hidden
+        position: absolute
+        top: 0
+        left: 0.5rem
+      .front
+        z-index : 2
+        background-color: white
+      .back
+        background-color: lightgrey
+        color : white
+        transform: rotateX(180deg)
+
+
+
