@@ -60,7 +60,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(180);
+	__webpack_require__(175);
 
 	_reactDom2.default.render(_react2.default.createElement(
 	  'div',
@@ -19729,7 +19729,7 @@
 
 	var _API2 = _interopRequireDefault(_API);
 
-	var _jquery = __webpack_require__(179);
+	var _jquery = __webpack_require__(174);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -21250,7 +21250,7 @@
 
 	var _reactAddonsTransitionGroup2 = _interopRequireDefault(_reactAddonsTransitionGroup);
 
-	var _jquery = __webpack_require__(179);
+	var _jquery = __webpack_require__(174);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -29337,12 +29337,7 @@
 	module.exports = ReactTransitionChildMapping;
 
 /***/ },
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -38558,16 +38553,16 @@
 
 
 /***/ },
-/* 180 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(181);
+	var content = __webpack_require__(176);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(183)(content, {});
+	var update = __webpack_require__(178)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -38584,10 +38579,10 @@
 	}
 
 /***/ },
-/* 181 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(182)();
+	exports = module.exports = __webpack_require__(177)();
 	// imports
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);", ""]);
 
@@ -38598,7 +38593,7 @@
 
 
 /***/ },
-/* 182 */
+/* 177 */
 /***/ function(module, exports) {
 
 	/*
@@ -38654,7 +38649,7 @@
 
 
 /***/ },
-/* 183 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
